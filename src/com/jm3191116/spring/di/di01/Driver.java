@@ -1,4 +1,4 @@
-package com.jm3191116.spring.ioc.ioc01;
+package com.jm3191116.spring.di.di01;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
