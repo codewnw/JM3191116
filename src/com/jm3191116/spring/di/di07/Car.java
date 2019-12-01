@@ -1,4 +1,4 @@
-package com.jm3191116.spring.di.di05;
+package com.jm3191116.spring.di.di07;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class Car {
 
+	@Autowired
+	@Qualifier("hondaEngine")
 	private Engine engine;
 
 	public void drive() {
@@ -14,14 +16,7 @@ public class Car {
 		System.out.println("Car is being driven..");
 	}
 
-	/**
-	 * DIP: Dependency Inversion Principle
-	 * Interview: IoC, DI, IoC Container and DIP
-	 */
-	@Autowired
-	public Car(@Qualifier("hondaEngine") Engine engine) {
-		System.out.println("Putting engine into car.");
-		this.engine = engine;
+	public Car() {
+		System.out.println("Car is being manufactured.");
 	}
-
 }
