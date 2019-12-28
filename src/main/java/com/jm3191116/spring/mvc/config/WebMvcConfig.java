@@ -12,6 +12,15 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 public class WebMvcConfig {
 	
+	/**
+	 * Spring MVc works for views/files
+	 * These views/files are configurable
+	 * so controllers are loosely coupled with view
+	 * advantage you'll get that without touching the
+	 * controller code you can change the view
+	 * example: you can switch from JSP to thymeleaf/freemarker/velocity 
+	 * or to PDF
+	 */
 	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
