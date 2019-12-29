@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/items")
 public class ItemController {
 
+	
 	@GetMapping(value = "/category/{categoryName}/id/{itemId}")
 	public String item(@PathVariable("categoryName") String catNm, @PathVariable("itemId") Long id, Model model) {
 		model.addAttribute("myCatNm", catNm);
