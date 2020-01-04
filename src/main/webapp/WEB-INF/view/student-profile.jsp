@@ -12,6 +12,10 @@
 	<table>
 		<tr>
 			<td><label>Name: </label></td>
+			<td>${student.studentCode}</td>
+		</tr>
+		<tr>
+			<td><label>Name: </label></td>
 			<td>${student.name}</td>
 		</tr>
 		<tr>
@@ -31,8 +35,17 @@
 			<td>${student.country}</td>
 		</tr>
 		<tr>
+			<td><label>DOB: </label></td>
+			<td>${student.dob}</td>
+		</tr>
+		<tr>
+			<td><label>Certificate Expiry: </label></td>
+			<td>${student.certificateExpiry}</td>
+		</tr>
+		<tr>
 			<td><label>Courses: </label></td>
-			<td>${student.courses[0]} &nbsp; ${student.courses[1]} &nbsp; ${student.courses[2]}</td>
+			<td>${student.courses[0]}&nbsp; ${student.courses[1]} &nbsp;
+				${student.courses[2]}</td>
 		</tr>
 		<tr>
 			<td><label>Graduate: </label></td>

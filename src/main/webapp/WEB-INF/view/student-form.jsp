@@ -6,21 +6,42 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student Registration form</title>
+<style type="text/css">
+.required{
+	color:red;
+}
+</style>
 </head>
 <body>
 	<form:form action="registration" method="post" modelAttribute="student">
 		<table>
 			<tr>
-				<td><label>Name: </label></td>
-				<td><form:input path="name"/></td>
+				<td><label>Name<span class="required">*</span>: </label></td>
+				<td><form:input path="name"/>
+				<form:errors path="name" cssClass="required"/></td>
+			</tr>
+			<tr>
+				<td><label>Student Code: </label></td>
+				<td><form:input path="studentCode"/>
+				<form:errors path="studentCode" cssClass="required"/></td>
 			</tr>
 			<tr>
 				<td><label>Age: </label></td>
-				<td><form:input path="age"/></td>
+				<td><form:input path="age"/>
+				<form:errors path="age" cssClass="required"/></td>
 			</tr>
 			<tr>
 				<td><label>Email: </label></td>
 				<td><form:input path="email"/></td>
+			</tr>
+			<tr>
+				<td><label>DOB: </label></td>
+				<td><form:input path="dob"/><form:errors path="dob" cssClass="required"/></td>
+			</tr>
+			<tr>
+				<td><label>Certificate Expiry: </label></td>
+				<td><form:input path="certificateExpiry"/>
+				<form:errors path="certificateExpiry" cssClass="required"/></td>
 			</tr>
 			<tr>
 				<td><label>Gender: </label></td>
