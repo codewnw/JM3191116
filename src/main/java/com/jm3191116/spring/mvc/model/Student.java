@@ -12,6 +12,8 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.jm3191116.spring.mvc.validation.BatchCode;
+
 public class Student {
 
 	@Size(min = 2, max = 20, message = " should be between 2 to 20 length")
@@ -32,6 +34,9 @@ public class Student {
 	@Future
 	private Date certificateExpiry;
 
+	@BatchCode(value = "CD", message = " prefix should be CD")
+	private String batchCode;
+
 	public Date getDob() {
 		return dob;
 	}
@@ -46,6 +51,14 @@ public class Student {
 
 	public void setCertificateExpiry(Date certificateExpiry) {
 		this.certificateExpiry = certificateExpiry;
+	}
+
+	public String getBatchCode() {
+		return batchCode;
+	}
+
+	public void setBatchCode(String batchCode) {
+		this.batchCode = batchCode;
 	}
 
 	private String comment;

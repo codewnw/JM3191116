@@ -11,9 +11,14 @@
 <body>
 	<table>
 		<tr>
-			<td><label>Name: </label></td>
+			<td><label>Student Code: </label></td>
 			<td>${student.studentCode}</td>
 		</tr>
+		<tr>
+			<td><label>Batch Code: </label></td>
+			<td>${student.batchCode}</td>
+		</tr>
+
 		<tr>
 			<td><label>Name: </label></td>
 			<td>${student.name}</td>

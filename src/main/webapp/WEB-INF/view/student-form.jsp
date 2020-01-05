@@ -26,6 +26,11 @@
 				<form:errors path="studentCode" cssClass="required"/></td>
 			</tr>
 			<tr>
+				<td><label>Batch Code: </label></td>
+				<td><form:input path="batchCode"/>
+				<form:errors path="batchCode" cssClass="required"/></td>
+			</tr>
+			<tr>
 				<td><label>Age: </label></td>
 				<td><form:input path="age"/>
 				<form:errors path="age" cssClass="required"/></td>
