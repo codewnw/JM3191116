@@ -2,6 +2,7 @@ package com.jm3191116.spring.mvc.controller;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,10 +15,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.jm3191116.spring.mvc.model.Student;
+import com.jm3191116.spring.mvc.service.StudentService;
 
 @Controller
 @RequestMapping(value = "/students")
 public class StudentController {
+	
+	@Autowired
+	private StudentService studentService;
 
 	@InitBinder
 	public void initBinder(WebDataBinder webDataBinder) {
@@ -37,6 +42,7 @@ public class StudentController {
 		if (bindingResult.hasErrors()) {
 			return "student-form";
 		}
+		studentService.save(student);
 		return "student-profile";
 	}
 
