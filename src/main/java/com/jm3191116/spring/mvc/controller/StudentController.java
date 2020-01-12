@@ -32,7 +32,7 @@ public class StudentController {
 
 	@GetMapping(value = "/registration")
 	public String showStudentForm(Model model) {
-		model.addAttribute("student", new Student());
+		model.addAttribute("student", studentService.emptyStudent());
 		return "student-form";
 	}
 
